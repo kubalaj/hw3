@@ -342,3 +342,216 @@ Served asset /jquery.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 16:53:31 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/order_by/title" for 127.0.0.1 at 2013-10-15 17:09:25 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"order"=>"title"}
+  Rendered movies/index.html.haml within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (Inconsistent indentation: 7 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    13:   %thead
+    14:     %tr
+    15:       %th{:class => (@params[:order]=="title" ? "hilite" : "")}
+    16:        = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
+    17:       %th Rating 
+    18:       %th{:class => (@params[:order]=="release_date" ? "hilite" : "")}
+    19:       = link_to "Release Date", movies_order_path(:order => "release_date", :ratings => params[:ratings]), :id => "release_date_header", :"data-val"=>"release_date"
+  app/views/movies/index.html.haml:16
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.3ms)
+
+
+Started GET "/movies/order_by/title" for 127.0.0.1 at 2013-10-15 18:07:56 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"order"=>"title"}
+  Rendered movies/index.html.haml within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (Inconsistent indentation: 5 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    13: %table#movies
+    14:   %thead
+    15:     %tr
+    16:      %th{:class => (@params[:order]=="title" ? "hilite" : "")}
+    17:      = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
+    18:       %th Rating 
+    19:      %th{:class => (@params[:order]=="release_date" ? "hilite" : "")}
+  app/views/movies/index.html.haml:16
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.7ms)
+
+
+Started GET "/movies/order_by/title" for 127.0.0.1 at 2013-10-15 18:09:05 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"order"=>"title"}
+  Rendered movies/index.html.haml within layouts/application (27.4ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (Inconsistent indentation: 5 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    13: %table#movies
+    14:   %thead
+    15:     %tr
+    16:      %th{:class => (@params[:order]=="title" ? "hilite" : "")}
+    17:      = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
+    18:      %th Rating 
+    19:      %th{:class => (@params[:order]=="release_date" ? "hilite" : "")}
+  app/views/movies/index.html.haml:16
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.3ms)
+
+
+Started GET "/movies/order_by/title" for 127.0.0.1 at 2013-10-15 18:10:14 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"order"=>"title"}
+  Rendered movies/index.html.haml within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 117ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    17:     = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
+    18:     %th Rating 
+    19:     %th{:class => (@params[:order]=="release_date" ? "hilite" : "")}
+    20:         = link_to "Release Date", movies_order_path(:order => "release_date", :ratings => params[:ratings]), :id => "release_date_header", :"data-val"=>"release_date" 
+    21:     %th More Info
+    22:   %tbody
+    23:     - @movies.each do |movie|
+  app/views/movies/index.html.haml:20
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/movies/order_by/title" for 127.0.0.1 at 2013-10-15 18:12:18 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"order"=>"title"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 112ms (Views: 111.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 18:12:19 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:19 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:19 -0700
+Served asset /application.js - 304 Not Modified (64ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2013-10-15 18:12:27 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG'))
+  Rendered movies/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 18:12:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:27 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2013-10-15 18:12:32 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G'))[0m
+  Rendered movies/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 18:12:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2013-10-15 18:12:37 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG','PG-13'))
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 18:12:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:37 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2013-10-15 18:12:40 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG','PG-13','R'))[0m
+  Rendered movies/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 18:12:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 18:12:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
