@@ -14,10 +14,10 @@
   %thead
     %tr
     %th{:class => (@params[:order]=="title" ? "hilite" : "")}
-    = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
+      = link_to "Movie Title", movies_order_path(:order => "title", :ratings => params[:ratings]), :id => "title_header", :"data-val"=>"title" 
     %th Rating 
     %th{:class => (@params[:order]=="release_date" ? "hilite" : "")}
-    = link_to "Release Date", movies_order_path(:order => "release_date", :ratings => params[:ratings]), :id => "release_date_header", :"data-val"=>"release_date" 
+      = link_to "Release Date", movies_order_path(:order => "release_date", :ratings => params[:ratings]), :id => "release_date_header", :"data-val"=>"release_date" 
     %th More Info
   %tbody
     - @movies.each do |movie|
